@@ -1,8 +1,6 @@
+@import "../fonts/raleway.css";
 @import "variables.styl";
 @import "helpers.styl";
-@import "http://webfonts.ru/import/raleway.css"; //font-family: 'Raleway'
-@import "http://webfonts.ru/import/roboto.css"; //font-family: 'Roboto Regular'
-
 *
 	box-sizing border-box
 	margin 0
@@ -21,8 +19,8 @@
 	h2
 		color red
 		font-size 25px
-		font-family 'Raleway SemiBold'
-		font-weight bold
+		font-family 'Raleway'
+		font-weight 600
 		margin 30px 0
 	a
 		color #fff
@@ -35,7 +33,7 @@
 	p
 		color #000
 		font-size 18px
-		font-family 'Roboto'
+		font-family 'Raleway'
 	/**/
 	.line
 		width 70%
@@ -184,7 +182,7 @@
 		article
 			position relative
 			transform rotate(-4deg)
-			width 41%
+			width 42%
 			left 55%
 			top 60px
 			+media(960px)
@@ -210,6 +208,7 @@
 	.block7, .block10
 		position relative
 		background url("../img/layer7-bg.jpg") no-repeat
+		background-size cover
 		padding 2em 0
 		+media(960px)
 			padding 1em 0
@@ -239,7 +238,7 @@
 				display none
 	.blocks8-9
 		height 640px
-		background linear-gradient(4deg, darkblue 0%,darkblue 50%,gray 50%,gray 100%)
+		background url("../img/bg1.jpg")
 		position relative
 		overflow hidden
 	.block8
@@ -273,8 +272,9 @@
 				top -90px
 	.block10
 		background url("../img/layer10-bg.jpg") no-repeat
+		background-size cover
 		article
-			width 35%
+			width 40%
 			left 3em
 			+media(960px)
 				width 40%
@@ -342,16 +342,28 @@
 					left -5px
 					top 300px
 	.block12
-		background linear-gradient(4deg, darkwhite 0%,darkwhite 440px,transparent 440px,transparent 100%)
+		background darkwhite
 		height 440px
 		position absolute
-		width 100%
-		left 0
-		bottom 0
+		width 105%
+		left -2.5%
+		top 63%
 		padding 5em 0
+		transform rotate(4deg)
+		+media(768px)
+			width 110%
+			height 550px
+			top 50%
+			left -6%
+		.inner
+			transform rotate(-4deg)
+			+media(768px)
+				width 90%
 		p
 			font-weight 600
 			color darkwhite
+			&.tac.font-gray.ttu
+				transform rotate(-4deg)
 			&.tac
 				margin -15px 0 40px
 			&.after
@@ -377,21 +389,18 @@
 	.difference
 		height 45px
 		border-radius 45px
-		display -webkit-flex
-		display -moz-flex
-		display -ms-flex
-		display -o-flex
-		display flex
-		justify-content space-between
-		align-items center
 		padding 0 15px
+		p.fl, p.fr
+			margin-top 14px
 		&.red
 			width 40%
 			margin 20px 38%
+			background -moz-linear-gradient(to right, #eb696f 0%,#eb696f 30%,red 30%,red 100%)
+			background -webkit-linear-gradient(to right, #eb696f 0%,#eb696f 30%,red 30%,red 100%)
 			background linear-gradient(to right, #eb696f 0%,#eb696f 30%,red 30%,red 100%)
 			&::before
 				content "кол-во показов"
-				font-family "Roboto"
+				font-family "Raleway"
 				font-size 18px
 				text-transform uppercase
 				position absolute
@@ -417,10 +426,12 @@
 		&.violet
 			width 30%
 			margin 20px 44%
+			background -moz-linear-gradient(to right, #865a95 0%,#865a95 20%,#6c3b7c 20%,#6c3b7c 100%)
+			background -webkit-linear-gradient(to right, #865a95 0%,#865a95 20%,#6c3b7c 20%,#6c3b7c 100%)
 			background linear-gradient(to right, #865a95 0%,#865a95 20%,#6c3b7c 20%,#6c3b7c 100%)
 			&::before
 				content "кол-во кликов"
-				font-family "Roboto"
+				font-family "Raleway"
 				font-size 18px
 				text-transform uppercase
 				position absolute
@@ -446,11 +457,13 @@
 		&.green
 			width 18%
 			margin 20px 50%
+			background -moz-linear-gradient(to right, blue 0%,blue 0%,#269594 0%,#269594 100%)
+			background -webkit-linear-gradient(to right, blue 0%,blue 0%,#269594 0%,#269594 100%)
 			background linear-gradient(to right, blue 0%,blue 0%,#269594 0%,#269594 100%)
 			border-radius 0 45px 45px 0
 			&::before
 				content "кол-во лидов"
-				font-family "Roboto"
+				font-family "Raleway"
 				font-size 18px
 				text-transform uppercase
 				position absolute
@@ -483,11 +496,13 @@
 		&.blue
 			width 6%
 			margin 20px 50%
+			background -moz-linear-gradient(to right, blue 0%,blue 0%,#3b70b0 0%,#3b70b0 100%)
+			background -webkit-linear-gradient(to right, blue 0%,blue 0%,#3b70b0 0%,#3b70b0 100%)
 			background linear-gradient(to right, blue 0%,blue 0%,#3b70b0 0%,#3b70b0 100%)
 			border-radius 0 45px 45px 0
 			&::before
 				content "кол-во клиентов"
-				font-family "Roboto"
+				font-family "Raleway"
 				font-size 18px
 				text-transform uppercase
 				position absolute
@@ -521,3 +536,4 @@
 		min-height 290px
 		background url("../img/section5-bg.jpg") no-repeat center
 		background-size cover
+		position relative
